@@ -7,6 +7,7 @@
 */
 
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap');
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -978,13 +979,13 @@ section,
   }
 }
 
-.hero .hero-content .hero-title {
+/* .hero .hero-content .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: var(--heading-color);
-}
+} */
 
 @media (max-width: 768px) {
   .hero .hero-content .hero-title {
@@ -4081,20 +4082,26 @@ section,
   font-weight: bold;
 }
 
-/* CTA Button */
-.btn-call {
-  background: linear-gradient(90deg, #FF794C, #E760FC);
+a.btn.btn-call {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF794C, #E760FC);
+  padding: 12px 28px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
   color: #fff;
-  font-weight: bold;
-  padding: 15px 35px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 4px 8px rgba(242, 241, 241, 0.972);
+  cursor: pointer;         /* makes it clickable */
+  position: relative;      /* ensures z-index works */
+  z-index: 1;              /* keep it above other elements */
 }
-.btn-call:hover {
-  background: linear-gradient(90deg, #E760FC, #ff7a4c);
-  color: #fff;
+
+a.btn.btn-call:hover {
+  background: linear-gradient(135deg, #E760FC, #FF794C);
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ---------------- RESPONSIVENESS ---------------- */
@@ -4251,7 +4258,19 @@ section,
 
 .coaching-programs {
   font-family: 'Space Grotesk', sans-serif;
-  background: linear-gradient(135deg, #fce5e5, #f9a9c2);
+  background: 
+    linear-gradient(
+      75deg,
+      #8C4DC6 0%,
+      #8C4DC6 5%,
+      #FFDAB4 70%,
+      #FF4388 100%
+    ),
+    rgba(0,0,0,0.2) url('../img/coaching-back.png'); /* your image */
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 .program-card {
@@ -4276,8 +4295,9 @@ section,
 
 .program-title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 900 !important;
   margin-bottom: 8px;
+  color: #fff;
 }
 
 .program-subtitle {
@@ -4341,7 +4361,7 @@ section,
 }
 
 /* Gradient headers + buttons */
-.aura { background: linear-gradient(135deg, #FF6464, #E2CEF8); }
+.aura { background: linear-gradient(155deg, #FF6464, #E2CEF8); }
 .aura-btn { background: linear-gradient(to right, #FF6464, #E2CEF8); }
 
 .realign { background: linear-gradient(135deg, #BC80EA, #BAA3FF); }
@@ -4353,20 +4373,35 @@ section,
 
 /* thrive section */
 
-    .thrive-section {
-      background: linear-gradient(135deg, #FF7F7F, #E3B9DE);
-      text-align: center;
-      padding: 80px 20px;
-      color: #fff;
-      position: relative;
-    }
+.thrive-section {
+  /* Gradient + image combined */
+  background: 
+    linear-gradient(
+      75deg,
+      #FF7F7F 0%,
+      #FF7F7F 45%,
+      #E3B9DE 70%,
+      #F1484B 100%
+    ),
+    rgba(0,0,0,0.5) url('../img/coaching-back.png'); /* your image */
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay; /* blends image + gradient */
+
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+}
+
     .thrive-section h2 {
-      font-size: 3.5rem;
+      font-size: 3.0rem;
       font-weight: 700;
       color: #000; /* black heading */
     }
     .thrive-section p {
-      font-size: 2.0rem;
+      font-size: 1.5rem;
       max-width: 900px;
       margin: 20px auto;
       color: #fff; /* white paragraph */
@@ -4385,7 +4420,7 @@ section,
       margin-right: 15px;
     }
     .btn-explore {
-      background: linear-gradient(90deg, #f7971e, #ffd200);
+      background: linear-gradient(90deg, #ff7b7b, #f953c6);
     }
     .btn-gradient:hover {
       opacity: 0.9;
@@ -4393,62 +4428,114 @@ section,
     }
 
 
-    /* testimonial */
-    .testimonial-section{
-           background: url("../img/Rectangle.png") no-repeat center center/cover;
+    /* Testimonial Section */
+    .testimonial-section {
+      background: url("../img/Rectangle.png") no-repeat center center/cover;
       position: relative;
       z-index: 1;
     }
-
+    
     .testimonial-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4); /* Dark overlay for better readability */
-  z-index: -1;
-}
-
-        .testimonial-card {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4); /* Dark overlay */
+      z-index: -1;
+    }
+    .testimonial-topbar {
+      width: 55.5px;
+      height: 4px;
+      top: -4px;
+      background: #3b3ef5; /* your rectangle color */
+      border-radius: 0px;
+      margin: 0 0 15px 0; /* center above content with spacing */
+    }    
+    
+    /* Card styling */
+    .testimonial-card {
       border: none;
-      /* border-radius: 15px; */
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      border-radius: 0px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+      overflow: visible;
     }
-    .testimonial-footer {
-      /* border-radius: 0 0 15px 15px; */
-      padding: 15px;
-      color: #fff;
-      display: flex;
-      align-items: center;
+    
+    .testimonial-card .card-body {
+      padding: 20px;
     }
-    .testimonial-footer img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-    .star {
-      color: #1e40af; /* Blue stars */
-    }
+    
     .testimonial-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 15px;
     }
+    
+    .star {
+      color: #1e40af; /* Blue stars */
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
     .testimonial-label {
       font-size: 14px;
       font-weight: 600;
-      color: #555;
+      color: #444;
       display: flex;
       align-items: center;
     }
+    
     .testimonial-label::before {
-      content: "⬤";
+      content: "\f164"; /* Thumbs up (Font Awesome unicode) */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900; /* solid style */
       font-size: 10px;
       margin-right: 6px;
-      color: #2563eb;
+      background: #2563eb;  /* Blue circle */
+      color: #fff;          /* White icon */
+      border-radius: 50%;
+      padding: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
     }
+    
+    .testimonial-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    /* Footer */
+    .testimonial-footer {
+      padding: 15px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+    
+    .testimonial-footer img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid #fff;
+    }
+    
+    /* Gradient variations */
+    .gradient-1 {
+      background: linear-gradient(90deg,#6a11cb,#2575fc);
+    }
+    
+    .gradient-2 {
+      background: linear-gradient(90deg,#ff6a88,#ff99ac);
+    }
+    
     .contact-btn {
       background-color: #ff6a4c;
       color: #fff;

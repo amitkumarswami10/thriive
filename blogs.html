@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact Us - Thriive360</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/fav-icon.png" rel="icon">
+  <link href="assets/img/fav-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .thrive-section {
+      background: linear-gradient(190deg, #F1A548, #FF6C6C, #A6649D);
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+      height: 70vh;
+    }
+
+    .thrive-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('assets/img/blogs-back.png') center/cover no-repeat;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    .thrive-section .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .thrive-section h2 {
+      font-weight: 800;
+      font-size: 4rem;
+      color: #fff;
+      margin-bottom: 50px;
+    }
+
+    .thrive-section p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.5rem;
+    }
+
+    .explore-btn {
+      background: linear-gradient(135deg, #F1A548, #FF6C6C, #A6649D);
+      border: 2px solid #fff;
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 8px;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .explore-btn:hover {
+      opacity: 0.85;
+    }
+  </style>
+  <style>
+    .featured-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #FFD4C7;
+    }
+
+    .featured-section h2 {
+      color: #ff4d4d;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-body h5 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .card-body a {
+      color: #007bff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .card-body a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <style>
+    .latest-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fffaf4;
+    }
+
+    .latest-section h2 {
+      color: #ff4d4d;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-body h5 {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      font-size: 0.9rem;
+      color: #444;
+      min-height: 50px;
+    }
+
+    .explore-btn1 {
+      background: #FF6C6C;
+      border: none;
+      padding: 8px 18px;
+      font-weight: 600;
+      border-radius: 6px;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .explore-btn:hover {
+      opacity: 0.85;
+    }
+
+    .card-footer {
+      font-size: 0.8rem;
+      color: #777;
+      background: #fff;
+      border-top: none;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo-thriive.png" alt="" style="width: 200px; height: 80px;">
+        <!-- <h1 class="sitename">Savora</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#" class="active">Blogs</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted d-none d-sm-block" href="#book-a-table">Get a Free Quote</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Breadcrumbs Section -->
+    <section class="breadcrumbs-section py-3">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html" class="text-dark">Home</a></li>
+            <li class="breadcrumb-item active text-dark" aria-current="page"><a href="#" class="text-dark">Blogs</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="thrive-section">
+      <div class="content">
+        <h2>Insights to Help You Thrive</h2>
+        <p>Discover powerful tools, soulful reflections, and expert strategies to elevate your personal and professional
+          journey.</p>
+        <button class="explore-btn">Explore Blogs</button>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <h2 style="font-size: 45px;">Featured Blogs</h2>
+      <div class="container">
+        <div class="row g-4">
+          <!-- Blog 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/feature1.png" class="card-img-top" alt="Blog 1">
+              <div class="card-body text-start">
+                <h5>Goodbye Surviving, Hello Thriving</h5>
+                <p>Call out a feature, benefit, or value of your site that can stand on its own.</p>
+                <a href="#">[Read More]</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/feature2.png" class="card-img-top" alt="Blog 2">
+              <div class="card-body text-start">
+                <h5>The Power of Aura Cleansing</h5>
+                <p>Call out a feature, benefit, or value of your site that can stand on its own.</p>
+                <a href="#">[Read More]</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/feature3.png" class="card-img-top" alt="Blog 3">
+              <div class="card-body text-start">
+                <h5>Rise Beyond Limits</h5>
+                <p>Call out a feature, benefit, or value of your site that can stand on its own.</p>
+                <a href="#">[Read More]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-section">
+      <h2>Latest Blogs</h2>
+      <div class="container">
+        <div class="row g-4">
+          <!-- Blog 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/latest.png" class="card-img-top" alt="Blog 1">
+              <div class="card-body text-start">
+                <h5>The Art of Inner Reset</h5>
+                <p>Discover how to pause, reset, and reprogram your mind for clarity, peace, and renewed focus.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <button class="explore-btn1">Explore</button>
+                <small class="text-muted">12 DAYS AGO</small>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/latest.png" class="card-img-top" alt="Blog 2">
+              <div class="card-body text-start">
+                <h5>The Art of Inner Reset</h5>
+                <p>Discover how to pause, reset, and reprogram your mind for clarity, peace, and renewed focus.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <button class="explore-btn1">Explore</button>
+                <small class="text-muted">12 DAYS AGO</small>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/latest.png" class="card-img-top" alt="Blog 3">
+              <div class="card-body text-start">
+                <h5>The Art of Inner Reset</h5>
+                <p>Discover how to pause, reset, and reprogram your mind for clarity, peace, and renewed focus.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <button class="explore-btn1">Explore</button>
+                <small class="text-muted">12 DAYS AGO</small>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 4 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/latest.png" class="card-img-top" alt="Blog 4">
+              <div class="card-body text-start">
+                <h5>The Art of Inner Reset</h5>
+                <p>Discover how to pause, reset, and reprogram your mind for clarity, peace, and renewed focus.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <button class="explore-btn1">Explore</button>
+                <small class="text-muted">12 DAYS AGO</small>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 5 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/latest.png" class="card-img-top" alt="Blog 5">
+              <div class="card-body text-start">
+                <h5>The Art of Inner Reset</h5>
+                <p>Discover how to pause, reset, and reprogram your mind for clarity, peace, and renewed focus.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <button class="explore-btn1">Explore</button>
+                <small class="text-muted">12 DAYS AGO</small>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 6 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/latest.png" class="card-img-top" alt="Blog 6">
+              <div class="card-body text-start">
+                <h5>The Art of Inner Reset</h5>
+                <p>Discover how to pause, reset, and reprogram your mind for clarity, peace, and renewed focus.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <button class="explore-btn1">Explore</button>
+                <small class="text-muted">12 DAYS AGO</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">‹</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">99</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">›</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Be the first to know about our latest updates, exclusive offers, and more.
+        </p>
+
+        <form class="newsletter-input">
+          <input type="email" class="form-control" placeholder="Enter your email" required>
+          <button type="submit">Get Started</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="row gy-5">
+
+        <div class="col-lg-4 ">
+          <div class="footer-content">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <img src="assets/img/logo-thriive.png" alt="" style="width: 200px; height: 80px;">
+            </a>
+            <p class="mb-4">Vestibulum ante ipsum primis in faucibus
+              orci luctus et ultrices posuere cubilia curae.
+              Donec velit neque auctor sit amet aliquam vel
+              ullamcorper sit amet ligula.</p>
+
+            <div class="social-links">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  About</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Careers</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Press</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Blog</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Digital Strategy</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cloud Computing</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Data Analytics</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  AI Solutions</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cybersecurity</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="footer-links">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Digital Strategy</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cloud Computing</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Data Analytics</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  AI Solutions</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cybersecurity</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="px-1 sitename">Thriive360</strong>
+                <span>All Rights
+                  Reserved</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+            <!-- <div class="credits">
+              Designed by <a href="#"></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

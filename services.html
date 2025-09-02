@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Blogs - Thriive360</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/fav-icon.png" rel="icon">
+  <link href="assets/img/fav-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .service-section {
+      font-family: 'Space Grotesk', sans-serif;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #000;
+      background:
+        radial-gradient(circle, #FFD5C3 100%, #FF1E00 0%),
+        /* dark orange at center */
+        linear-gradient(90deg, #FFEDFC, #E9BDFF);
+      overflow: hidden;
+    }
+
+    .service-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("assets/img/radial.png") center/cover no-repeat;
+      opacity: 0.5;
+      /* control transparency */
+      z-index: 1;
+    }
+
+    .service-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .service-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #FF1E00;
+
+    }
+
+    .service-text {
+      font-size: 1.5rem;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    .service-btn {
+      background: linear-gradient(to right, #ff914d, #ff69b4);
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 8px;
+      border: 1px solid #fff;
+      transition: 0.3s;
+    }
+
+    .service-btn:hover {
+      opacity: 0.9;
+    }
+
+    .gradient-text {
+      text-align: center;
+      font-weight: bold;
+      font-size: 50px;
+      background: linear-gradient(135deg, #FF6C6C 60%, #F1A548 30%, #A6649D 10%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .breadcrumbs-section {
+      background: #fff;
+      /* White background */
+    }
+
+    .breadcrumb a {
+      text-decoration: none;
+      color: #000;
+      /* Black text for links */
+      font-weight: 500;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb-item.active {
+      color: #555;
+      /* Dark gray for current page */
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .service-title {
+        font-size: 1.6rem;
+      }
+
+      .service-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <style>
+    .aura-section {
+      background: url('assets/img/aura.png') no-repeat center center/cover;
+      height: 100vh;
+      /* full height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+
+    .aura-box {
+      background: rgba(255, 255, 255, 0.2);
+      /* transparent effect */
+      backdrop-filter: blur(5px);
+      padding: 30px 40px;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 15px;
+      max-width: 600px;
+      width: 90%;
+      position: absolute;
+    }
+
+    .aura-section img {
+      width: 500px;
+      height: auto;
+
+    }
+
+    .aura-box h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .aura-box {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        position: relative;
+        margin-left: 100px;
+      }
+
+      .aura-section {
+        height: 30vh;
+      }
+
+      .aura-box img {
+        width: 40px;
+      }
+
+      .aura-box h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo-thriive.png" alt="" style="width: 200px; height: 80px;">
+        <!-- <h1 class="sitename">Savora</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#" class="active">Services</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted d-none d-sm-block" href="#book-a-table">Get a Free Quote</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Breadcrumbs Section -->
+    <section class="breadcrumbs-section py-3">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="#" class="text-dark">Home</a></li>
+            <li class="breadcrumb-item active text-dark" aria-current="page"><a href="#" class="text-dark">Services</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="service-content">
+        <h1 class="service-title">Transform Your Life, One Session at a Time</h1>
+        <p class="service-text">Tailored coaching journeys designed to help you release, realign, and rise into your
+          fullest
+          potential.</p>
+        <button class="btn service-btn">Book Your Free Consultation</button>
+      </div>
+    </section>
+
+    <section>
+      <h1 class="gradient-text">Our Signature Programs</h1>
+    </section>
+
+    <section class="aura-section">
+      <!-- Left Image -->
+      <img src="assets/img/Looper-2.png" alt="left design" class="top-img"
+        style="margin-left:0px !important; margin-top:60px!important">
+      <div class="aura-box" style="margin-top: 200px;">
+        <!-- Text -->
+        <div>
+          <h1>AURA LIFT <br> Program</h1>
+        </div>
+
+      </div>
+      <!-- Right Image -->
+      <img src="assets/img/Looper-2.png" alt="right design" class="bottom-img"
+        style="margin-bottom: -300px!important; margin-left: 100px;">
+    </section>
+
+    <!-- Aura Lift Section -->
+    <section class="py-5" style="background: linear-gradient(180deg, #fff6f3, #ffe7e0);">
+      <div class="container">
+        <!-- Heading -->
+        <h2 class="text-center fw-bold mb-4" style="color:#d16ba5;">
+          Lift Your Aura. Reclaim Your Radiance.
+        </h2>
+
+        <!-- Paragraphs -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <p>
+              Do you ever feel weighed down by clutter—mentally, emotionally, or even spiritually?
+            </p>
+            <p>
+              The Aura Lift Program is your reset button. It is designed to help you declutter the noise, rediscover
+              your
+              essence, and realign your energy.
+            </p>
+            <p>
+              Through gentle yet powerful coaching practices, you’ll step into a space of self-awareness, gain clarity
+              in
+              decision-making, and reconnect with your inner strength. Whether you’re navigating personal crossroads or
+              simply craving more balance, Aura Lift offers the guidance to rise above and shine brighter.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experience Box -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8">
+            <div class="p-4 rounded shadow-sm" style="background-color: #fff7f0; border: 1px solid #f5d7b4;">
+              <h5 class="fw-bold mb-4">What You’ll Experience</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">✨ Flexible coaching sessions tailored to your needs</li>
+                <li class="mb-2">✨ Gentle release of mental and emotional clutter</li>
+                <li class="mb-2">✨ Improved self-awareness and clarity in decision-making</li>
+                <li class="mb-2">✨ Confidence to embrace your authentic self</li>
+                <li class="mb-2">✨ Healthy habit integration for lasting balance</li>
+                <li class="mb-0">✨ A renewed sense of calm, focus, and empowerment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aura-section"
+      style="background-image: url('assets/img/REALIGN.png')!important; background-size:cover; background-position: top center;">
+      <!-- Left Image -->
+      <img src="assets/img/Looper-2.png" alt="left design" class="top-img"
+        style="margin-left:0px !important; margin-top:60px!important">
+      <div class="aura-box" style="margin-top: 200px;">
+        <!-- Text -->
+        <div>
+          <h1>REALIGN <br> Program</h1>
+        </div>
+
+      </div>
+      <!-- Right Image -->
+      <img src="assets/img/Looper-2.png" alt="right design" class="bottom-img"
+        style="margin-bottom: -300px!important; margin-left: 100px;">
+    </section>
+
+    <!-- Realign Program Section -->
+    <section class="py-5" style="background: linear-gradient(180deg, #fffbea, #ffe9d6);">
+      <div class="container">
+        <!-- Heading -->
+        <h2 class="text-center fw-bold mb-4" style="color:#e26d7e;">
+          Heal. Balance. Reconnect with Your True Self.
+        </h2>
+
+        <!-- Paragraphs -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <p>
+              Sometimes life leaves us feeling disconnected—stuck in old patterns, burdened by past emotions, and
+              uncertain
+              of the way forward.
+            </p>
+            <p>
+              The Realign Program is a deep, restorative journey that helps you clear emotional clutter, heal unresolved
+              wounds, and reprogram your subconscious beliefs.
+            </p>
+            <p>
+              Through guided sessions and tailored techniques, you’ll uncover what’s holding you back, find your inner
+              balance, and create the alignment needed to move forward with clarity and purpose.
+              This isn’t just coaching—it’s a cosmic reset for the soul.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experience Box -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8">
+            <div class="p-4 rounded shadow-sm" style="background-color: #fff7f0; border: 1px solid #f5d7b4;">
+              <h5 class="fw-bold mb-4">What You’ll Experience</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">🌙 A powerful breakthrough session targeting one of the prime areas of your life</li>
+                <li class="mb-2">🌙 Release of suppressed emotional blockages and unprocessed grief</li>
+                <li class="mb-2">🌙 Shift from limiting beliefs to liberating, empowering thought patterns</li>
+                <li class="mb-2">🌙 Cultivation of deep self-awareness, courage, and resilience</li>
+                <li class="mb-0">🌙 Tools for sustainable growth and lasting transformation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aura-section"
+      style="background-image: url('assets/img/Rise.png')!important; background-size:cover; background-position: top center;">
+      <!-- Left Image -->
+      <img src="assets/img/Looper-2.png" alt="left design" class="top-img"
+        style="margin-left:0px !important; margin-top:60px!important">
+      <div class="aura-box" style="margin-top: 200px;">
+        <!-- Text -->
+        <div>
+          <h1>RISE <br> Program</h1>
+        </div>
+
+      </div>
+      <!-- Right Image -->
+      <img src="assets/img/Looper-2.png" alt="right design" class="bottom-img"
+        style="margin-bottom: -300px!important; margin-left: 100px;">
+    </section>
+
+    <!-- Rise Program Section -->
+    <section class="py-5" style="background: linear-gradient(180deg, #ffeae2, #ffd8c2);">
+      <div class="container">
+        <!-- Heading -->
+        <h2 class="text-center fw-bold mb-4" style="color:#d66bbd;">
+          Transform. Empower. Expand Beyond Limits.
+        </h2>
+
+        <!-- Paragraphs -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <p class="text-muted">
+              The Rise Program is not just coaching—it’s a full-spectrum transformation journey designed to elevate
+              every
+              area of your life.
+            </p>
+            <p class="text-muted">
+              Through a 360° alignment process, we help you break free from old limitations, create clarity in your
+              purpose,
+              and expand your personal and professional horizons. With ongoing guidance, accountability, and empowerment
+              tools, you’ll rise into the most confident, unstoppable version of yourself.
+            </p>
+            <p class="text-muted">
+              If you’re ready to step into your power and lead with purpose, Rise is the path forward.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experience Box -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8">
+            <div class="p-4 rounded shadow-sm" style="background-color: #fff7f0; border: 1px solid #f5d7b4;">
+              <h5 class="fw-bold mb-4">What You’ll Experience</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">🌟 A 360° realignment across three core areas of life (personal, professional,
+                  emotional)
+                </li>
+                <li class="mb-2">🌟 Deep clarity and connection to your higher purpose</li>
+                <li class="mb-2">🌟 Empowerment strategies to reclaim control of your story</li>
+                <li class="mb-2">🌟 Ongoing support through weekly 1:1 coaching calls (3 months)</li>
+                <li class="mb-0">🌟 Tools to operate at your highest potential every day</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="row gy-5">
+
+        <div class="col-lg-4 ">
+          <div class="footer-content">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <img src="assets/img/logo-thriive.png" alt="" style="width: 200px; height: 80px;">
+            </a>
+            <p class="mb-4">Vestibulum ante ipsum primis in faucibus
+              orci luctus et ultrices posuere cubilia curae.
+              Donec velit neque auctor sit amet aliquam vel
+              ullamcorper sit amet ligula.</p>
+
+            <div class="social-links">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  About</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Careers</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Press</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Blog</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Digital Strategy</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cloud Computing</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Data Analytics</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  AI Solutions</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cybersecurity</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="footer-links">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Digital Strategy</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cloud Computing</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Data Analytics</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  AI Solutions</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i>
+                  Cybersecurity</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="px-1 sitename">Thriive360</strong>
+                <span>All Rights
+                  Reserved</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+            <!-- <div class="credits">
+              Designed by <a href="#"></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
