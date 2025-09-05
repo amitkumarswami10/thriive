@@ -8,6 +8,7 @@
 
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -4029,7 +4030,7 @@ section,
 
 
 .about-section { 
-  background: linear-gradient(135deg, #fce5e5, #f9a9c2);
+  /* background: linear-gradient(135deg, #fce5e5, #f9a9c2); */
   color: #000;
   padding: 60px 15px;
   position: relative;
@@ -4038,12 +4039,12 @@ section,
 .about-overlay {
   position: relative;
   width: 100%;
-  min-height: 500px;
+  min-height: 600px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  z-index: 0;
+  z-index: 1;
 }
 
 /* Background image (only used in desktop overlay) */
@@ -4053,14 +4054,16 @@ section,
   right: 0;
   width: 100%;
   height: 100%;
+  position: center center;
   object-fit: cover;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Default (Desktop / Tablet) → No split background */
 .content-left,
 .content-right {
   background: none;
+  z-index: 1;
 }
 
 /* Foreground text */
@@ -4071,10 +4074,11 @@ section,
 }
 
 .highlight {
-  background: linear-gradient(90deg, #ff6b6b, #b95dd7);
+  background: linear-gradient(90deg, #FF6C6C, #A6649D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  font-size: 90px;
 }
 
 .highlight1 {
@@ -4084,18 +4088,17 @@ section,
 
 a.btn.btn-call {
   display: inline-block;
-  background: linear-gradient(135deg, #FF794C, #E760FC);
-  padding: 12px 28px;
-  border-radius: 15px;
+  padding: 8px 37px;
+  border-radius: 12px; /* rounded edges */
+  background: linear-gradient(90deg, #FF7E5F, #FFB47B, #FF6EC7);
+  border: 1px solid #fff;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
-  color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: inset 0 4px 8px rgba(242, 241, 241, 0.972);
-  cursor: pointer;         /* makes it clickable */
-  position: relative;      /* ensures z-index works */
-  z-index: 1;              /* keep it above other elements */
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+      box-shadow: inset 0 4px 10px rgba(242, 241, 241, 0.972);
 }
 
 a.btn.btn-call:hover {
@@ -4266,20 +4269,25 @@ a.btn.btn-call:hover {
       #FFDAB4 70%,
       #FF4388 100%
     ),
-    rgba(0,0,0,0.2) url('../img/coaching-back.png'); /* your image */
-
+    rgba(0,0,0,0.2) url('../img/coaching-back.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+  margin-top: -20px;
+  z-index: 5;
+  background-position: center center;
 }
 
+/* Card base */
 .program-card {
+  display: flex;
+  flex-direction: column;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
-  height: 100%;
   background: #fff;
   transition: transform .3s ease, box-shadow .3s ease;
+  height: auto; /* default for small devices */
 }
 
 .program-card:hover {
@@ -4287,6 +4295,14 @@ a.btn.btn-call:hover {
   box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
 }
 
+/* Fix height only on large screens */
+@media (min-width: 992px) {
+  .program-card {
+    height: 676px;
+  }
+}
+
+/* Header */
 .program-header {
   padding: 25px 20px;
   color: #fff;
@@ -4294,18 +4310,29 @@ a.btn.btn-call:hover {
 }
 
 .program-title {
-  font-size: 1.5rem;
-  font-weight: 900 !important;
+  font-size: 29px;
+  font-weight: 400;
   margin-bottom: 8px;
   color: #fff;
+  font-family: 'Sigmar', Regular;
 }
 
 .program-subtitle {
-  font-size: 0.95rem;
-  margin: 0;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
+.program-subtitle1 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+/* Body flex for button alignment */
 .program-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 25px 20px;
   background: #fff;
 }
@@ -4314,6 +4341,7 @@ a.btn.btn-call:hover {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
+  flex: 1; /* pushes button down */
 }
 
 .program-body ul li {
@@ -4325,8 +4353,9 @@ a.btn.btn-call:hover {
 }
 
 .btn-wrap {
-  text-align: center;   /* Centers only the button */
-  margin-top: 15px;
+  text-align: center;
+  margin-top: auto; /* ensures button stays at bottom */
+  margin-bottom: 15px;
 }
 
 .learn-btn {
@@ -4338,9 +4367,16 @@ a.btn.btn-call:hover {
   text-decoration: none;
   transition: opacity .3s ease;
 }
+
 .learn-btn:hover { opacity: 0.85; }
 
 /* Custom Tick Marks */
+.tick li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
 .tick li::before {
   content: "✔";
   position: absolute;
@@ -4348,26 +4384,18 @@ a.btn.btn-call:hover {
   font-weight: bold;
 }
 
-.aura-tick li::before {
-  color: #e74c3c; /* red shade */
-}
-
-.realign-tick li::before {
-  color: #8e44ad; /* purple shade */
-}
-
-.rise-tick li::before {
-  color: #3498db; /* blue shade */
-}
+.aura-tick li::before { color: #e74c3c; }
+.realign-tick li::before { color: #8e44ad; }
+.rise-tick li::before { color: #3498db; }
 
 /* Gradient headers + buttons */
 .aura { background: linear-gradient(155deg, #FF6464, #E2CEF8); }
 .aura-btn { background: linear-gradient(to right, #FF6464, #E2CEF8); }
 
-.realign { background: linear-gradient(135deg, #BC80EA, #BAA3FF); }
+.realign { background: linear-gradient(165deg, #BC80EA, #BAA3FF); }
 .realign-btn { background: linear-gradient(to right, #BC80EA, #BAA3FF); }
 
-.rise { background: linear-gradient(135deg, #80BFEA, #A3FFBA); }
+.rise { background: linear-gradient(155deg, #80BFEA, #A3FFBA); }
 .rise-btn { background: linear-gradient(to right, #80BFEA, #A3FFBA); }
 
 
@@ -4377,15 +4405,16 @@ a.btn.btn-call:hover {
   /* Gradient + image combined */
   background: 
     linear-gradient(
-      75deg,
+      85deg,
       #FF7F7F 0%,
-      #FF7F7F 45%,
-      #E3B9DE 70%,
+      #FF7F7F 25%,
+      #E3B9DE 80%,
       #F1484B 100%
     ),
     rgba(0,0,0,0.5) url('../img/coaching-back.png'); /* your image */
 
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   background-blend-mode: overlay; /* blends image + gradient */
 
@@ -4396,7 +4425,7 @@ a.btn.btn-call:hover {
 }
 
     .thrive-section h2 {
-      font-size: 3.0rem;
+      font-size: 64px;
       font-weight: 700;
       color: #000; /* black heading */
     }
@@ -4414,6 +4443,8 @@ a.btn.btn-call:hover {
       font-size: 1rem;
       color: #fff;
       transition: 0.3s ease-in-out;
+      
+      
     }
     .btn-connect {
       background: linear-gradient(90deg, #ff7b7b, #f953c6);
@@ -4540,7 +4571,7 @@ a.btn.btn-call:hover {
       background-color: #ff6a4c;
       color: #fff;
       font-weight: bold;
-      padding: 12px 30px;
+      padding: 10px 35px;
       border-radius: 8px;
       border: none;
       transition: 0.3s;
@@ -4593,7 +4624,7 @@ a.btn.btn-call:hover {
       border: none;
       color: #fff;
       font-weight: 600;
-      padding: 12px 30px;
+      padding: 10px 35px;
       transition: 0.3s;
       white-space: nowrap;
     }

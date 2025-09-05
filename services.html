@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blogs - Thriive360</title>
+  <title>Services - Thriive360</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/fav-icon.png" rel="icon">
-  <link href="assets/img/fav-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/Thriive-icon.png" rel="icon">
+  <link href="assets/img/Thriive-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -37,14 +37,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       text-align: center;
-      color: #000;
+      padding: 60px 20px;
+
       background:
-        radial-gradient(circle, #FFD5C3 100%, #FF1E00 0%),
-        /* dark orange at center */
-        linear-gradient(90deg, #FFEDFC, #E9BDFF);
-      overflow: hidden;
+        linear-gradient(269.26deg, #FFEDFC 49.88%, #E9BDFF 86.85%),
+        radial-gradient(121.05% 117.66% at 30.23% 12.7%,
+          #FFD5C3 26.24%,
+          rgba(255, 30, 0, 0.98) 100%);
+      background-blend-mode: normal;
     }
+
 
     .service-section::before {
       content: "";
@@ -67,18 +71,24 @@
     }
 
     .service-title {
-      font-size: 3.0rem;
-      font-weight: 600;
-      color: #FF1E00;
+      font-size: 50px;
+      font-weight: 700;
+      /* bolder look */
       font-family: 'Sigmar', sans-serif;
-
+      background: linear-gradient(90deg, #A6649D, #FF6C6C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      text-align: center;
+      /* optional, centers the text */
     }
 
     .service-text {
       font-size: 1.5rem;
       font-weight: 400;
-      margin-top: 15px;
-      margin-bottom: 25px;
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
 
     .service-btn {
@@ -191,10 +201,11 @@
     }
 
     .aura-box h1 {
-      font-weight: 700;
-      font-size: 3.5rem;
+      font-weight: 400;
+      font-size: 79px;
       margin: 0;
       color: #fff;
+      font-family: 'Sigmar', sans-serif;
     }
 
     @media (max-width: 768px) {
@@ -228,7 +239,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo-thriive.png" alt="" style="width: 200px; height: 80px;">
+        <img src="assets/img/Thriive-logo.png" alt="" style="width: 200px; height: 80px;">
         <!-- <h1 class="sitename">Savora</h1> -->
       </a>
 
@@ -243,7 +254,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted d-none d-sm-block" href="#book-a-table">Get a Free Quote</a>
+      <a class="btn-getstarted d-none d-sm-block" href="contact-us.html">Get a Free Quote</a>
 
     </div>
   </header>
@@ -255,7 +266,7 @@
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="#" class="text-dark">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html" class="text-dark">Home</a></li>
             <li class="breadcrumb-item active text-dark" aria-current="page"><a href="#" class="text-dark">Services</a>
             </li>
           </ol>
@@ -284,12 +295,12 @@
       <div class="aura-box" style="margin-top: 200px;">
         <!-- Text -->
         <div>
-          <h1>AURA LIFT <br> Program</h1>
+          <h1>RESET <br> Program</h1>
         </div>
 
       </div>
       <!-- Right Image -->
-      <img src="assets/img/Looper-2.png" alt="right design" class="bottom-img"
+      <img src="assets/img/Looper-2.png" alt="right design" class="b ottom-img"
         style="margin-bottom: -300px!important; margin-left: 100px;">
     </section>
 
@@ -478,7 +489,7 @@
         <div class="col-lg-4 ">
           <div class="footer-content">
             <a href="index.html" class="logo d-flex align-items-center mb-4">
-              <img src="assets/img/logo-thriive.png" alt="" style="width: 200px; height: 80px;">
+              <img src="assets/img/Thriive-logo.png" alt="" style="width: 200px; height: 80px;">
             </a>
             <p class="mb-4">Vestibulum ante ipsum primis in faucibus
               orci luctus et ultrices posuere cubilia curae.
