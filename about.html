@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <title>Index - Thriive360</title>
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+   <!-- Favicons -->
+   <link href="assets/img/Thriive-icon.png" rel="icon">
+   <link href="assets/img/Thriive-icon.png" rel="apple-touch-icon">
+
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com" rel="preconnect">
+   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
+   <!-- Vendor CSS Files -->
+   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Main CSS File -->
+   <link href="assets/css/main.css" rel="stylesheet">
+   <!-- Custom CSS -->
+   <style>
+      /* Gradient text */
+      .gradient-text {
+         background: linear-gradient(90deg, #ff4a4a, #a94acb);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+
+      /* Custom heading styles */
+      .custom-heading {
+         font-size: 50px;
+         line-height: 1.2;
+      }
+
+      /* Custom paragraph styles */
+      .custom-paragraph {
+         font-size: 20px;
+         font-weight: 400;
+         color: #444;
+         line-height: 1.6;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+         .custom-heading {
+            font-size: 38px;
+         }
+
+         .custom-paragraph {
+            font-size: 18px;
+         }
+      }
+
+      @media (max-width: 576px) {
+         .custom-heading {
+            font-size: 28px;
+         }
+
+         .custom-paragraph {
+            font-size: 16px;
+         }
+      }
+   </style>
+   <!-- Custom CSS -->
+   <style>
+      .stats-section {
+         background-color: #FFF8EA;
+         padding: 60px 20px;
+         text-align: center;
+      }
+
+      .stats-grid {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 30px;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+      .stat-item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .number-wrap {
+         display: flex;
+         align-items: baseline;
+         /* makes + align nicely with number */
+         justify-content: center;
+      }
+
+      .stat-item h2 {
+         font-size: 50px;
+         font-weight: 700;
+         color: #FF7350;
+         margin: 0;
+      }
+
+      .plus {
+         font-size: 50px;
+         font-weight: 700;
+         color: #FF7350;
+         margin-left: 4px;
+      }
+
+      .stat-item p {
+         font-size: 20px;
+         font-weight: 400;
+         color: #002147;
+         margin-top: 10px;
+         line-height: 1.4;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+         .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+         }
+      }
+
+      @media (max-width: 576px) {
+         .stats-grid {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+   <style>
+      .mission-section {
+         background-color: #fff;
+      }
+
+      .mission-title {
+         font-size: 42px;
+         font-weight: 700;
+         background: linear-gradient(90deg, #FF7350, #C46CFF);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+
+      .mission-text {
+         font-size: 20px;
+         font-weight: 400;
+         color: #222;
+         line-height: 1.6;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+         .mission-title {
+            font-size: 32px;
+            text-align: left;
+         }
+
+         .mission-text {
+            text-align: left;
+         }
+
+         h5 {
+            text-align: left;
+         }
+      }
+   </style>
+   <style>
+      .testimonial-section1 {
+         background-color: #FFF8EA;
+         max-height: 370px;
+      }
+
+      /* Quote Styling */
+      .quote-box {
+         position: relative;
+         font-size: 18px;
+         font-weight: 400;
+         color: #222;
+         line-height: 1.8;
+      }
+
+      .quote-icon {
+         font-size: 120px;
+         font-weight: 700;
+         background: linear-gradient(90deg, #FF7350, #C46CFF);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         display: inline-block;
+      }
+
+      .quote-icon.start {
+         position: absolute;
+         top: -80px;
+         left: -60px;
+      }
+
+      .quote-icon.end {
+         position: absolute;
+         bottom: -120px;
+         right: 370px;
+      }
+
+      /* Name Overlay */
+      .name-overlay {
+         background: linear-gradient(90deg, #FF7350, #C46CFF);
+         color: #fff;
+         padding: 10px 20px;
+         border-radius: 6px;
+         position: absolute;
+         bottom: 15px;
+         left: 15px;
+         text-align: left;
+      }
+
+      .name-overlay h6 {
+         margin: 0;
+         font-size: 16px;
+         font-weight: 700;
+      }
+
+      .name-overlay small {
+         font-size: 12px;
+         display: block;
+      }
+
+      /* Responsive Fix */
+      @media (max-width: 768px) {
+         .quote-box {
+            margin-top: 20px;
+         }
+
+         .quote-icon.start {
+            position: static;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+         }
+
+         .quote-icon.end {
+            position: static;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+         }
+
+         .name-overlay {
+            position: static;
+            margin-top: 10px;
+            text-align: center;
+            display: inline-block;
+         }
+      }
+   </style>
+   <style>
+      .clients-section {
+         background-color: #FFF8EA;
+      }
+
+      .clients-title {
+         background: linear-gradient(90deg, #ff4a4a, #a94acb);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         font-weight: 700;
+         font-size: 40px;
+      }
+
+      .clients-section img {
+         max-height: 60px;
+         /* keeps logos consistent */
+         object-fit: contain;
+         opacity: 0.85;
+         transition: all 0.3s ease-in-out;
+      }
+
+      .clients-section img:hover {
+         opacity: 1;
+         transform: scale(1.05);
+      }
+   </style>
+   <style>
+      .section-title {
+         background: linear-gradient(90deg, #ff4a4a, #a94acb);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         font-weight: 700;
+         margin-top: 60px;
+         font-size: 40px;
+         /* adjust size as needed */
+         line-height: 1;
+         /* keeps it snug */
+         display: flex;
+         align-items: center;
+      }
+
+      .btn-viewall {
+         background-color: #FF7350;
+         color: #fff;
+         font-size: 16px;
+         font-weight: 500;
+         border-radius: 8px;
+         padding: 10px 20px;
+         margin: 0;
+         line-height: 1;
+         /* aligns with h2 better */
+         display: flex;
+         align-items: center;
+      }
+
+      .btn-viewall:hover {
+         background-color: #FF7350;
+         color: #fff;
+      }
+
+      .card {
+         border-radius: 12px;
+         overflow: hidden;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .card-img-top {
+         height: 180px;
+         object-fit: cover;
+      }
+
+      .card-footer {
+         background: #fff;
+         border-top: none;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .btn-explore1 {
+         background-color: #FF7350;
+         color: #fff;
+         font-weight: 600;
+         border-radius: 8px;
+         padding: 8px 20px;
+         border: none;
+      }
+
+      .btn-explore1:hover {
+         background-color: #FF7350;
+      }
+
+      @media (max-width: 768px) {
+         .btn-viewall {
+            display: none;
+         }
+      }
+   </style>
+</head>
+
+<body class="index-page">
+
+   <header id="header" class="header d-flex align-items-center sticky-top">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+
+         <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/Thriive-logo.png" alt="" style="width: 200px; height: 80px;">
+            <!-- <h1 class="sitename">Savora</h1> -->
+         </a>
+
+         <nav id="navmenu" class="navmenu">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="#" class="active">About Us</a></li>
+               <li><a href="services.html">Services</a></li>
+               <li><a href="blogs.html">Blogs</a></li>
+               <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+         </nav>
+
+         <a class="btn-getstarted d-none d-sm-block" href="contact-us.html">Get a Free Quote</a>
+
+      </div>
+   </header>
+
+   <main class="main">
+
+      <!-- Breadcrumbs Section -->
+      <section class="breadcrumbs-section py-3">
+         <div class="container">
+            <nav aria-label="breadcrumb">
+               <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="index.html" class="text-dark">Home</a></li>
+                  <li class="breadcrumb-item active text-dark" aria-current="page"><a href="#" class="text-dark">About
+                        Us</a>
+                  </li>
+               </ol>
+            </nav>
+         </div>
+      </section>
+
+      <section class="py-5">
+         <div class="container">
+            <div class="row align-items-center">
+               <!-- Left Content -->
+               <div class="col-lg-6 mb-4 mb-lg-0">
+                  <h2 class="custom-heading">
+                     Guiding You <span class="gradient-text">Towards Growth, Balance, and Brilliance</span>
+                  </h2>
+                  <p class="custom-paragraph mt-4">
+                     Thrive 360° is more than coaching—it is a journey of evolution. Rooted in wisdom and guided by
+                     experience, we offer tailored pathways that restore balance, build confidence, and spark lasting
+                     change. From reclaiming inner clarity to unlocking your highest potential, we walk with you at
+                     every step toward a thriving life.
+                  </p>
+               </div>
+
+               <!-- Right Image -->
+               <div class="col-lg-6 text-center">
+                  <img src="assets/img/about1.png" alt="Guidance" class="img-fluid rounded shadow">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="stats-section">
+         <div class="container">
+            <div class="stats-grid">
+               <div class="stat-item">
+                  <div class="number-wrap">
+                     <h2 class="counter" data-target="73">0</h2><span class="plus">+</span>
+                  </div>
+                  <p>Lives<br>Transformed</p>
+               </div>
+               <div class="stat-item">
+                  <div class="number-wrap">
+                     <h2 class="counter" data-target="80">0</h2><span class="plus">+</span>
+                  </div>
+                  <p>Breakthrough<br>Sessions Delivered</p>
+               </div>
+               <div class="stat-item">
+                  <div class="number-wrap">
+                     <h2 class="counter" data-target="2700">0</h2><span class="plus">+</span>
+                  </div>
+                  <p>Hours of<br>Coaching</p>
+               </div>
+               <div class="stat-item">
+                  <div class="number-wrap">
+                     <h2 class="counter" data-target="5000">0</h2><span class="plus">+</span>
+                  </div>
+                  <p>Emotional Blockages<br>Released</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="mission-section py-5">
+         <div class="container">
+            <div class="row align-items-center">
+
+               <!-- Left Image -->
+               <div class="col-md-6 mb-4 mb-md-0">
+                  <img src="assets/img/about2.png" alt="Mission Image" class="img-fluid rounded-3 shadow-sm">
+               </div>
+
+               <!-- Right Content -->
+               <div class="col-md-6">
+                  <h2 class="mission-title">Soulful & <br>Transformational</h2>
+                  <h5 class="fw-bold mt-5">Our Mission</h5>
+                  <p class="mission-text mt-5">
+                     Thrive 360° is more than coaching—it is a journey of evolution.
+                     Rooted in wisdom and guided by experience, we offer tailored
+                     pathways that restore balance, build confidence, and spark lasting change.
+                     From reclaiming inner clarity to unlocking your highest potential, we walk
+                     with you at every step toward a thriving life.
+                  </p>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <section class="testimonial-section1">
+         <div class="container" style="margin-top: -50px;">
+            <div class="row align-items-center">
+
+               <!-- Left Image with Name Overlay -->
+               <div class="col-md-4 position-relative text-center mb-4 mb-md-0">
+                  <img src="assets/img/about3.png" alt="Founder Image" class="img-fluid">
+
+                  <!-- Name & Title Overlay -->
+                  <div class="name-overlay">
+                     <h6>Campii Oberoi</h6>
+                     <small>Founder & CEO, Thrive 360°</small>
+                  </div>
+               </div>
+
+               <!-- Right Quote -->
+               <div class="col-md-8">
+                  <div class="quote-box">
+                     <span class="quote-icon start">“</span>
+                     <p>
+                        At Thriive 360°, I believe true transformation begins within. Every journey is unique,
+                        yet the essence is the same—helping people shed old patterns, realign with their purpose,
+                        and rise into their fullest expression. My mission is to guide each individual with
+                        compassion and clarity, so they don’t just survive life, but truly thrive in it.
+                     </p>
+                     <span class="quote-icon end">”</span>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <section class="mission-section py-5">
+         <div class="container">
+            <div class="row align-items-center">
+
+               <!-- Left Image -->
+               <div class="col-md-6 mb-4 mb-md-0">
+                  <img src="assets/img/about4.png" alt="Mission Image" class="img-fluid rounded-3 shadow-sm">
+               </div>
+
+               <!-- Right Content -->
+               <div class="col-md-6">
+                  <h2 class="mission-title">Premium & <br>Aspirational</h2>
+                  <h5 class="fw-bold mt-5">Our Vision</h5>
+                  <p class="mission-text mt-5">
+                     The vision of Thriive 360° is to empower individuals across the globe to move beyond limitations,
+                     cultivate resilience,
+                     and live in alignment with their true selves — setting a new standard for holistic coaching and
+                     transformational impact.
+                  </p>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <section class="mission-section py-5">
+         <div class="container">
+            <div class="row align-items-center">
+
+
+
+               <!-- Right Content -->
+               <div class="col-md-6">
+                  <h2 class="mission-title">The Essence of <br>Thriive 360°</h2>
+                  <h5 class="fw-bold mt-5">Our Values</h5>
+                  <p class="mission-text mt-5">
+                     At Thriive 360°, we value empowerment, authenticity, and compassion — guiding every individual to
+                     rise with clarity and
+                     confidence. We believe in growth that is sustainable, balanced, and deeply transformative. Our
+                     commitment is to create
+                     lasting impact through excellence in every journey we walk together.
+                  </p>
+               </div>
+
+               <!-- Left Image -->
+               <div class="col-md-6 mb-4 mb-md-0">
+                  <img src="assets/img/about5.png" alt="Mission Image" class="img-fluid rounded-3 shadow-sm">
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <section class="clients-section py-5">
+         <div class="container text-center">
+            <h2 class="clients-title mb-5">Our Clients</h2>
+            <div class="row justify-content-center align-items-center">
+               <div class="col-6 col-md-2 mb-4">
+                  <img src="assets/img/about/logo1.png" class="img-fluid" alt="Client Logo">
+               </div>
+               <div class="col-6 col-md-2 mb-4">
+                  <img src="assets/img/about/logo2.png" class="img-fluid" alt="Client Logo">
+               </div>
+               <div class="col-6 col-md-2 mb-4">
+                  <img src="assets/img/about/logo3.png" class="img-fluid" alt="Client Logo">
+               </div>
+               <div class="col-6 col-md-2 mb-4">
+                  <img src="assets/img/about/logo4.png" class="img-fluid" alt="Client Logo">
+               </div>
+               <div class="col-6 col-md-2 mb-4">
+                  <img src="assets/img/about/logo5.png" class="img-fluid" alt="Client Logo">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="container py-5">
+         <!-- Section Header -->
+         <!-- Section Header -->
+         <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="section-title mb-0">Top News and Announcements</h2>
+            <a href="#" class="btn btn-viewall">View All</a>
+         </div>
+
+         <!-- Blog Cards -->
+         <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+               <div class="card h-100">
+                  <img src="../assets/img/latest.png" class="card-img-top" alt="Blog Image">
+                  <div class="card-body">
+                     <h5 class="card-title">The Art of Inner Reset</h5>
+                     <p class="card-text">Discover how to pause, reset, and reprogram your mind for clarity, peace, and
+                        renewed
+                        focus.</p>
+                  </div>
+                  <div class="card-footer">
+                     <button class="btn-explore1">Explore</button>
+                     <small class="text-muted">12 DAYS AGO</small>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+               <div class="card h-100">
+                  <img src="../assets/img/latest.png" class="card-img-top" alt="Blog Image">
+                  <div class="card-body">
+                     <h5 class="card-title">The Art of Inner Reset</h5>
+                     <p class="card-text">Discover how to pause, reset, and reprogram your mind for clarity, peace, and
+                        renewed
+                        focus.</p>
+                  </div>
+                  <div class="card-footer">
+                     <button class="btn-explore1">Explore</button>
+                     <small class="text-muted">12 DAYS AGO</small>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+               <div class="card h-100">
+                  <img src="../assets/img/latest.png" class="card-img-top" alt="Blog Image">
+                  <div class="card-body">
+                     <h5 class="card-title">The Art of Inner Reset</h5>
+                     <p class="card-text">Discover how to pause, reset, and reprogram your mind for clarity, peace, and
+                        renewed
+                        focus.</p>
+                  </div>
+                  <div class="card-footer">
+                     <button class="btn-explore1">Explore</button>
+                     <small class="text-muted">12 DAYS AGO</small>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+   </main>
+
+   <footer id="footer" class="footer light-background">
+
+      <div class="container">
+         <div class="row gy-5">
+
+            <div class="col-lg-4 ">
+               <div class="footer-content">
+                  <a href="index.html" class="logo d-flex align-items-center mb-4">
+                     <img src="assets/img/Thriive-logo.png" alt="" style="width: 200px; height: 80px;">
+                  </a>
+                  <p class="mb-4" style="font-size: 16px;">Your story doesn’t
+                     end with burnout, doubt, or loss. <br>
+                     It begins when you decide to rise. 🌟 <br>
+                     Campii Oberoi helps you write the next chapter.
+                  </p>
+
+                  <div class="social-links">
+                     <a href="#"><i class="bi bi-facebook"></i></a>
+                     <a href="#"><i class="bi bi-twitter-x"></i></a>
+                     <a href="#"><i class="bi bi-linkedin"></i></a>
+                     <a href="#"><i class="bi bi-youtube"></i></a>
+                     <a href="#"><i class="bi bi-github"></i></a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+               <div class="footer-links">
+                  <h4>Important Links</h4>
+                  <ul>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           About</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Careers</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Press</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Blog</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Contact</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+               <div class="footer-links">
+                  <h4>RESET – Evolve, Elevate & Empower</h4>
+                  <ul>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Aura Lift Program</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Breakthrough Polish</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Soul Detox</a></li>
+                     <!-- <li><a href="#"><i class="bi bi-chevron-right"></i> AI Solutions</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li> -->
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-2 col-6">
+               <div class="footer-links">
+                  <h4>REALIGN – Heal, Balance & Reconnect</h4>
+                  <ul>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Cosmic Cleanse Facial
+                           Program</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Inner Glow Ritual</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Third Eye Touch-Up</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Soul Surgery</a></li>
+                     <!-- <li><a href="#"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li> -->
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-2 col-6">
+               <div class="footer-links">
+                  <h4>RISE – Transform, Empower & Expand</h4>
+                  <ul>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Thriive 360° Glow Facial</a>
+                     </li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Ascension Facial (VIP Day)</a>
+                     </li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Divine Reset (90-Day
+                           Journey)</a></li>
+                     <li><a href="#"><i class="bi bi-chevron-right"></i>
+                           Full-Spectrum Soul Facial</a>
+                     </li>
+                     <!-- <li><a href="#"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li> -->
+                  </ul>
+               </div>
+            </div>
+
+            <!-- <div class="col-lg-4">
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Digital Strategy</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Cloud Computing</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Data Analytics</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> AI Solutions</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li>
+            </ul>
+          </div>
+        </div> -->
+
+         </div>
+      </div>
+
+      <div class="footer-bottom">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-6">
+                  <div class="copyright">
+                     <p>© <span>Copyright</span> <strong class="px-1 sitename">Thriive360</strong>
+                        <span>All Rights
+                           Reserved</span>
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="footer-bottom-links">
+                     <a href="#">Privacy Policy</a>
+                     <a href="#">Terms of Service</a>
+                     <a href="#">Cookie Policy</a>
+                  </div>
+                  <!-- <div class="credits">
+              Designed by <a href="#"></a>
+            </div> -->
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </footer>
+
+   <!-- Scroll Top -->
+   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+         class="bi bi-arrow-up-short"></i></a>
+
+   <!-- Preloader -->
+   <div id="preloader"></div>
+
+   <!-- Vendor JS Files -->
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/vendor/php-email-form/validate.js"></script>
+   <script src="assets/vendor/aos/aos.js"></script>
+   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+   <!-- Main JS File -->
+   <script src="assets/js/main.js"></script>
+   <!-- Counter Animation Script -->
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         const counters = document.querySelectorAll(".counter");
+         const speed = 100; // lower = faster
+
+         const animateCounters = () => {
+            counters.forEach(counter => {
+               const target = +counter.getAttribute("data-target");
+               const updateCount = () => {
+                  const count = +counter.innerText.replace(/\D/g, "");
+                  const increment = Math.ceil(target / speed);
+
+                  if (count < target) {
+                     counter.innerText = count + increment;
+                     setTimeout(updateCount, 20);
+                  } else {
+                     counter.innerText = target.toLocaleString();
+                  }
+               };
+               updateCount();
+            });
+         };
+
+         // Run animation only when section is visible
+         const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                  animateCounters();
+                  observer.disconnect();
+               }
+            });
+         });
+
+         observer.observe(document.querySelector(".stats-section"));
+      });
+   </script>
+
+
+</body>
+
+</html>
