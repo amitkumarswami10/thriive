@@ -1621,171 +1621,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  position: relative;
-}
-
-.testimonials .testimonial-grid::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: -1;
-}
-
-.testimonials .testimonial-item {
-  position: relative;
-}
-
-.testimonials .testimonial-item.featured .testimonial-card {
-  background-color: var(--accent-color);
-  transform: scale(1.05);
-}
-
-.testimonials .testimonial-item.featured .testimonial-card .testimonial-meta h3,
-.testimonials .testimonial-item.featured .testimonial-card .testimonial-meta h4 {
-  color: var(--contrast-color);
-}
-
-.testimonials .testimonial-item.featured .testimonial-card .company-logo i {
-  color: var(--contrast-color);
-}
-
-.testimonials .testimonial-item.featured .testimonial-card .testimonial-body p,
-.testimonials .testimonial-item.featured .testimonial-card .testimonial-body .quote-icon {
-  color: var(--contrast-color);
-}
-
-.testimonials .testimonial-card {
-  background-color: var(--surface-color);
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease-in-out;
-}
-
-.testimonials .testimonial-card:hover:not(.featured .testimonial-card) {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.12);
-}
-
-.testimonials .testimonial-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.testimonials .testimonial-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.testimonials .testimonial-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.testimonials .testimonial-meta {
-  flex: 1;
-}
-
-.testimonials .testimonial-meta h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.testimonials .testimonial-meta h4 {
-  font-size: 0.875rem;
-  color: color-mix(in srgb, var(--heading-color), transparent 40%);
-  margin-bottom: 0.75rem;
-}
-
-.testimonials .company-logo i {
-  font-size: 1.5rem;
-  color: var(--accent-color);
-}
-
-.testimonials .testimonial-body {
-  position: relative;
-}
-
-.testimonials .testimonial-body .quote-icon {
-  color: var(--accent-color);
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.testimonials .testimonial-body p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-@media (max-width: 991.98px) {
-  .testimonials .testimonial-grid {
-    gap: 1.5rem;
-  }
-
-  .testimonials .testimonial-grid::before {
-    width: 150px;
-    height: 150px;
-  }
-
-  .testimonials .testimonial-card {
-    padding: 1.5rem;
-  }
-
-  .testimonials .testimonial-image {
-    width: 70px;
-    height: 70px;
-  }
-
-  .testimonials .testimonial-meta h3 {
-    font-size: 1.125rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .testimonials .testimonial-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .testimonials .testimonial-item.featured .testimonial-card {
-    transform: scale(1);
-  }
-
-  .testimonials .testimonial-header {
-    gap: 1rem;
-  }
-
-  .testimonials .testimonial-image {
-    width: 60px;
-    height: 60px;
-  }
-
-  .testimonials .company-logo i {
-    font-size: 1.25rem;
-  }
-}
 
 /*--------------------------------------------------------------
 # Chefs Section
@@ -4465,6 +4300,11 @@ a.btn.btn-call:hover {
       position: relative;
       z-index: 1;
     }
+    .testimonial-card,
+.testimonial-card .card-body,
+.testimonial-card .testimonial-footer {
+  border-radius: 0 !important;
+}
     
     .testimonial-section::before {
       content: "";
@@ -4958,4 +4798,65 @@ a.btn.btn-call:hover {
    .btn-viewall {
       display: none;
    }
+}
+
+/* Whatsapp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 80px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Tooltip bubble */
+.chat-tooltip {
+  position: absolute;
+  right: 70px; /* distance from button */
+  bottom: 50%;
+  transform: translateY(50%);
+  background: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+/* Tooltip arrow */
+.chat-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #333;
+}
+
+/* Show on hover */
+.whatsapp-float:hover .chat-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 80px;
 }
