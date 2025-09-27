@@ -4130,11 +4130,18 @@ a.btn.btn-call:hover {
   box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Fix height only on large screens */
-@media (min-width: 992px) {
-  .program-card {
-    height: 676px;
-  }
+/* Equal height fix */
+.coaching-programs .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaching-programs .col-md-4 {
+  display: flex;
+}
+.program-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -4232,6 +4239,7 @@ a.btn.btn-call:hover {
 
 .rise { background: linear-gradient(155deg, #80BFEA, #A3FFBA); }
 .rise-btn { background: linear-gradient(to right, #80BFEA, #A3FFBA); }
+
 
 
 /* thrive section */
@@ -4806,7 +4814,7 @@ a.btn.btn-call:hover {
   width: 60px;
   height: 60px;
   bottom: 80px;
-  right: 40px;
+  right: 12px;
   background-color: #25d366;
   color: #fff;
   border-radius: 50%;
